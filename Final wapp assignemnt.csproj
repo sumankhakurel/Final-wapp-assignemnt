@@ -1,0 +1,636 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CAB5ADF-AF53-48A8-9196-28F2A90345B5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Final_wapp_assignemnt</RootNamespace>
+    <AssemblyName>Final wapp assignemnt</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\dashlite.css" />
+    <Content Include="assets\css\dashlite.min.css" />
+    <Content Include="assets\css\dashlite.rtl.css" />
+    <Content Include="assets\css\dashlite.rtl.min.css" />
+    <Content Include="assets\css\editors\quill.css" />
+    <Content Include="assets\css\editors\quill.rtl.css" />
+    <Content Include="assets\css\editors\summernote.css" />
+    <Content Include="assets\css\editors\summernote.rtl.css" />
+    <Content Include="assets\css\editors\tinymce.css" />
+    <Content Include="assets\css\editors\tinymce.rtl.css" />
+    <Content Include="assets\css\libs\bootstrap-icons.css" />
+    <Content Include="assets\css\libs\fontawesome-icons.css" />
+    <Content Include="assets\css\libs\jstree.css" />
+    <Content Include="assets\css\libs\themify-icons.css" />
+    <Content Include="assets\css\skins\theme-blue.css" />
+    <Content Include="assets\css\skins\theme-bluelite.css" />
+    <Content Include="assets\css\skins\theme-egyptian.css" />
+    <Content Include="assets\css\skins\theme-green.css" />
+    <Content Include="assets\css\skins\theme-red.css" />
+    <Content Include="assets\css\style-email.css" />
+    <Content Include="assets\css\theme.css" />
+    <Content Include="assets\fonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fa-solid-900.svg" />
+    <Content Include="assets\fonts\Nioicon.svg" />
+    <Content Include="assets\fonts\themify.svg" />
+    <Content Include="assets\images\jsTree\32px-dark.png" />
+    <Content Include="assets\images\jsTree\32px.png" />
+    <Content Include="assets\images\jsTree\40px-dark.png" />
+    <Content Include="assets\images\jsTree\40px.png" />
+    <Content Include="assets\images\jsTree\throbber-dark.gif" />
+    <Content Include="assets\images\jsTree\throbber.gif" />
+    <Content Include="assets\js\apps\calendar.js" />
+    <Content Include="assets\js\apps\chats.js" />
+    <Content Include="assets\js\apps\file-manager.js" />
+    <Content Include="assets\js\apps\inbox.js" />
+    <Content Include="assets\js\apps\kanban.js" />
+    <Content Include="assets\js\apps\messages.js" />
+    <Content Include="assets\js\bundle.js" />
+    <Content Include="assets\js\charts\chart-analytics.js" />
+    <Content Include="assets\js\charts\chart-ecommerce.js" />
+    <Content Include="assets\js\charts\chart-lms.js" />
+    <Content Include="assets\js\charts\chart-sales.js" />
+    <Content Include="assets\js\charts\chart-widgets.js" />
+    <Content Include="assets\js\editors.js" />
+    <Content Include="assets\js\example-chart.js" />
+    <Content Include="assets\js\example-dragula.js" />
+    <Content Include="assets\js\example-listbox.js" />
+    <Content Include="assets\js\example-map.js" />
+    <Content Include="assets\js\example-sweetalert.js" />
+    <Content Include="assets\js\example-toastr.js" />
+    <Content Include="assets\js\example-tree.js" />
+    <Content Include="assets\js\libs\datatable-btns.js" />
+    <Content Include="assets\js\libs\dragula.js" />
+    <Content Include="assets\js\libs\dual-listbox.js" />
+    <Content Include="assets\js\libs\editors\quill.js" />
+    <Content Include="assets\js\libs\editors\skins\content\default\content.css" />
+    <Content Include="assets\js\libs\editors\summernote.js" />
+    <Content Include="assets\js\libs\editors\tinymce.js" />
+    <Content Include="assets\js\libs\fullcalendar.js" />
+    <Content Include="assets\js\libs\jkanban.js" />
+    <Content Include="assets\js\libs\jqvmap.js" />
+    <Content Include="assets\js\libs\jstree.js" />
+    <Content Include="assets\js\libs\tagify.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="Image\arun.jpg" />
+    <Content Include="Image\graphic.jpg" />
+    <Content Include="NewFolder1\About.aspx" />
+    <Content Include="NewFolder1\Contract.aspx" />
+    <Content Include="NewFolder1\ContractUs.aspx" />
+    <Content Include="NewFolder1\Courses.aspx" />
+    <Content Include="NewFolder1\css\style.css" />
+    <Content Include="NewFolder1\Home.aspx" />
+    <Content Include="NewFolder1\images\about-img.svg" />
+    <Content Include="NewFolder1\images\about.jpg" />
+    <Content Include="NewFolder1\images\Arun.png" />
+    <Content Include="NewFolder1\images\author.jpg" />
+    <Content Include="NewFolder1\images\back.png" />
+    <Content Include="NewFolder1\images\become.jpg" />
+    <Content Include="NewFolder1\images\black.jpg" />
+    <Content Include="NewFolder1\images\blackboard.svg" />
+    <Content Include="NewFolder1\images\books.svg" />
+    <Content Include="NewFolder1\images\comment_1.jpg" />
+    <Content Include="NewFolder1\images\comment_2.jpg" />
+    <Content Include="NewFolder1\images\contact-img.svg" />
+    <Content Include="NewFolder1\images\contact_background.jpg" />
+    <Content Include="NewFolder1\images\Contract.jpg" />
+    <Content Include="NewFolder1\images\Course4.jpg" />
+    <Content Include="NewFolder1\images\Course5.jpg" />
+    <Content Include="NewFolder1\images\Course6.jpg" />
+    <Content Include="NewFolder1\images\Courses.jpg" />
+    <Content Include="NewFolder1\images\courses_background.jpg" />
+    <Content Include="NewFolder1\images\course_1.jpg" />
+    <Content Include="NewFolder1\images\course_2.jpg" />
+    <Content Include="NewFolder1\images\course_3.jpg" />
+    <Content Include="NewFolder1\images\course_4.jpg" />
+    <Content Include="NewFolder1\images\course_5.jpg" />
+    <Content Include="NewFolder1\images\course_6.jpg" />
+    <Content Include="NewFolder1\images\course_7.jpg" />
+    <Content Include="NewFolder1\images\course_8.jpg" />
+    <Content Include="NewFolder1\images\course_9.jpg" />
+    <Content Include="NewFolder1\images\earth-globe.svg" />
+    <Content Include="NewFolder1\images\elearning.jpg" />
+    <Content Include="NewFolder1\images\envelope.svg" />
+    <Content Include="NewFolder1\images\event_1.jpg" />
+    <Content Include="NewFolder1\images\event_2.jpg" />
+    <Content Include="NewFolder1\images\event_3.jpg" />
+    <Content Include="NewFolder1\images\exam.svg" />
+    <Content Include="NewFolder1\images\gard.jpg" />
+    <Content Include="NewFolder1\images\latest_1.jpg" />
+    <Content Include="NewFolder1\images\latest_2.jpg" />
+    <Content Include="NewFolder1\images\latest_3.jpg" />
+    <Content Include="NewFolder1\images\login.jpg" />
+    <Content Include="NewFolder1\images\logo.gif" />
+    <Content Include="NewFolder1\images\logo.png" />
+    <Content Include="NewFolder1\images\milestones_background.jpg" />
+    <Content Include="NewFolder1\images\milestone_1.svg" />
+    <Content Include="NewFolder1\images\milestone_2.svg" />
+    <Content Include="NewFolder1\images\milestone_3.svg" />
+    <Content Include="NewFolder1\images\milestone_4.svg" />
+    <Content Include="NewFolder1\images\mortarboard.svg" />
+    <Content Include="NewFolder1\images\news_1.jpg" />
+    <Content Include="NewFolder1\images\news_2.jpg" />
+    <Content Include="NewFolder1\images\news_3.jpg" />
+    <Content Include="NewFolder1\images\news_background.jpg" />
+    <Content Include="NewFolder1\images\page-header.jpg" />
+    <Content Include="NewFolder1\images\phone-call.svg" />
+    <Content Include="NewFolder1\images\pic-1.jpg" />
+    <Content Include="NewFolder1\images\pic-2.jpg" />
+    <Content Include="NewFolder1\images\pic-3.jpg" />
+    <Content Include="NewFolder1\images\pic-4.jpg" />
+    <Content Include="NewFolder1\images\pic-5.jpg" />
+    <Content Include="NewFolder1\images\pic-6.jpg" />
+    <Content Include="NewFolder1\images\pic-7.jpg" />
+    <Content Include="NewFolder1\images\pic-8.jpg" />
+    <Content Include="NewFolder1\images\pic-9.jpg" />
+    <Content Include="NewFolder1\images\placeholder.svg" />
+    <Content Include="NewFolder1\images\post-1-1.png" />
+    <Content Include="NewFolder1\images\post-1-2.png" />
+    <Content Include="NewFolder1\images\post-1-3.png" />
+    <Content Include="NewFolder1\images\post-1-4.png" />
+    <Content Include="NewFolder1\images\post-1-5.png" />
+    <Content Include="NewFolder1\images\post-1-6.png" />
+    <Content Include="NewFolder1\images\post-2-1.png" />
+    <Content Include="NewFolder1\images\post-2-2.png" />
+    <Content Include="NewFolder1\images\post-2-3.png" />
+    <Content Include="NewFolder1\images\post-2-4.png" />
+    <Content Include="NewFolder1\images\post-2-5.png" />
+    <Content Include="NewFolder1\images\post-2-6.png" />
+    <Content Include="NewFolder1\images\post-3-1.png" />
+    <Content Include="NewFolder1\images\post-3-2.png" />
+    <Content Include="NewFolder1\images\post-3-3.png" />
+    <Content Include="NewFolder1\images\post-3-4.png" />
+    <Content Include="NewFolder1\images\post-3-5.png" />
+    <Content Include="NewFolder1\images\post-3-6.png" />
+    <Content Include="NewFolder1\images\Pranisha.JPG" />
+    <Content Include="NewFolder1\images\professor.svg" />
+    <Content Include="NewFolder1\images\Riya.png" />
+    <Content Include="NewFolder1\images\run.png" />
+    <Content Include="NewFolder1\images\search_background.jpg" />
+    <Content Include="NewFolder1\images\slider_background.jpg" />
+    <Content Include="NewFolder1\images\smartphone.svg" />
+    <Content Include="NewFolder1\images\Suman.png" />
+    <Content Include="NewFolder1\images\sunil.JPG" />
+    <Content Include="NewFolder1\images\Suraj.JPG" />
+    <Content Include="NewFolder1\images\teachers_background.jpg" />
+    <Content Include="NewFolder1\images\teacher_1.jpg" />
+    <Content Include="NewFolder1\images\teacher_2.jpg" />
+    <Content Include="NewFolder1\images\teacher_3.jpg" />
+    <Content Include="NewFolder1\images\teacher_4.jpg" />
+    <Content Include="NewFolder1\images\teacher_5.jpg" />
+    <Content Include="NewFolder1\images\teacher_6.jpg" />
+    <Content Include="NewFolder1\images\testimonials_background.jpg" />
+    <Content Include="NewFolder1\images\testimonials_user.jpg" />
+    <Content Include="NewFolder1\images\thumb-1.png" />
+    <Content Include="NewFolder1\images\thumb-2.png" />
+    <Content Include="NewFolder1\images\thumb-3.png" />
+    <Content Include="NewFolder1\images\thumb-4.png" />
+    <Content Include="NewFolder1\images\thumb-5.png" />
+    <Content Include="NewFolder1\images\thumb-6.png" />
+    <Content Include="NewFolder1\images\thumb-7.png" />
+    <Content Include="NewFolder1\images\thumb-8.png" />
+    <Content Include="NewFolder1\images\thumb-9.png" />
+    <Content Include="NewFolder1\images\vid-1.mp4" />
+    <Content Include="NewFolder1\images\vid-2.mp4" />
+    <Content Include="NewFolder1\images\vid-3.mp4" />
+    <Content Include="NewFolder1\images\vid-4.mp4" />
+    <Content Include="NewFolder1\images\vid-5.mp4" />
+    <Content Include="NewFolder1\images\vid-6.mp4" />
+    <Content Include="NewFolder1\images\vid-7.mp4" />
+    <Content Include="NewFolder1\images\vid-8.mp4" />
+    <Content Include="NewFolder1\images\vid-9.mp4" />
+    <Content Include="NewFolder1\js\contact_custom.js" />
+    <Content Include="NewFolder1\js\courses_custom.js" />
+    <Content Include="NewFolder1\js\custom.js" />
+    <Content Include="NewFolder1\js\elements_custom.js" />
+    <Content Include="NewFolder1\js\jquery-3.2.1.min.js" />
+    <Content Include="NewFolder1\js\news_custom.js" />
+    <Content Include="NewFolder1\js\news_post_custom.js" />
+    <Content Include="NewFolder1\js\script.js" />
+    <Content Include="NewFolder1\js\teachers_custom.js" />
+    <Content Include="NewFolder1\Login.aspx" />
+    <Content Include="NewFolder1\playlist.aspx" />
+    <Content Include="NewFolder1\plugins\easing\easing.js" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\css\fontawesome-all.css" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.svg" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.svg" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.svg" />
+    <Content Include="NewFolder1\plugins\greensock\animation.gsap.min.js" />
+    <Content Include="NewFolder1\plugins\greensock\ScrollToPlugin.min.js" />
+    <Content Include="NewFolder1\plugins\greensock\TimelineMax.min.js" />
+    <Content Include="NewFolder1\plugins\greensock\TweenMax.min.js" />
+    <Content Include="NewFolder1\plugins\OwlCarousel2-2.2.1\ajax-loader.gif" />
+    <Content Include="NewFolder1\plugins\OwlCarousel2-2.2.1\animate.css" />
+    <Content Include="NewFolder1\plugins\OwlCarousel2-2.2.1\owl.carousel.css" />
+    <Content Include="NewFolder1\plugins\OwlCarousel2-2.2.1\owl.carousel.js" />
+    <Content Include="NewFolder1\plugins\OwlCarousel2-2.2.1\owl.theme.default.css" />
+    <Content Include="NewFolder1\plugins\OwlCarousel2-2.2.1\owl.video.play.png" />
+    <Content Include="NewFolder1\plugins\parallax.js-2.0.0\jquery.parallax.min.js" />
+    <Content Include="NewFolder1\plugins\progressbar\progressbar.min.js" />
+    <Content Include="NewFolder1\plugins\scrollmagic\ScrollMagic.min.js" />
+    <Content Include="NewFolder1\plugins\scrollTo\jquery.scrollTo.min.js" />
+    <Content Include="NewFolder1\Profile.aspx" />
+    <Content Include="NewFolder1\Signup.aspx" />
+    <Content Include="NewFolder1\StudentCourses.aspx" />
+    <Content Include="NewFolder1\StudentHomePage.aspx" />
+    <Content Include="NewFolder1\styles\bootstrap4\bootstrap.min.css" />
+    <Content Include="NewFolder1\styles\bootstrap4\bootstrap.min.js" />
+    <Content Include="NewFolder1\styles\bootstrap4\popper.js" />
+    <Content Include="NewFolder1\styles\contact_responsive.css" />
+    <Content Include="NewFolder1\styles\contact_styles.css" />
+    <Content Include="NewFolder1\styles\courses_responsive.css" />
+    <Content Include="NewFolder1\styles\courses_styles.css" />
+    <Content Include="NewFolder1\styles\elements_responsive.css" />
+    <Content Include="NewFolder1\styles\elements_styles.css" />
+    <Content Include="NewFolder1\styles\main_styles.css" />
+    <Content Include="NewFolder1\styles\news_post_responsive.css" />
+    <Content Include="NewFolder1\styles\news_post_styles.css" />
+    <Content Include="NewFolder1\styles\news_responsive.css" />
+    <Content Include="NewFolder1\styles\news_styles.css" />
+    <Content Include="NewFolder1\styles\responsive.css" />
+    <Content Include="NewFolder1\styles\signup.aspx" />
+    <Content Include="NewFolder1\styles\teachers_responsive.css" />
+    <Content Include="NewFolder1\styles\teachers_styles.css" />
+    <Content Include="NewFolder1\Teacher.aspx" />
+    <Content Include="NewFolder1\TeacherSignup.aspx" />
+    <Content Include="NewFolder1\TeachersLogin.aspx" />
+    <Content Include="NewFolder1\update.aspx" />
+    <Content Include="NewFolder1\watch-video.aspx" />
+    <Content Include="Pages\admin.aspx" />
+    <Content Include="Pages\Homepage.aspx" />
+    <Content Include="Pages\category.aspx" />
+    <Content Include="Pages\Courses.aspx" />
+    <Content Include="Pages\InstructerList.aspx" />
+    <Content Include="Pages\instructorDetails.aspx" />
+    <Content Include="Pages\students.aspx" />
+    <Content Include="Pages\AdminProfile.aspx" />
+    <Content Include="Pages\settings.aspx" />
+    <Content Include="Pages\test.aspx" />
+    <Content Include="Pages\WebForm9.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewFolder1\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Contract.aspx.cs">
+      <DependentUpon>Contract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Contract.aspx.designer.cs">
+      <DependentUpon>Contract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\ContractUs.aspx.cs">
+      <DependentUpon>ContractUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\ContractUs.aspx.designer.cs">
+      <DependentUpon>ContractUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Courses.aspx.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Courses.aspx.designer.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\playlist.aspx.cs">
+      <DependentUpon>playlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\playlist.aspx.designer.cs">
+      <DependentUpon>playlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\StudentCourses.aspx.cs">
+      <DependentUpon>StudentCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\StudentCourses.aspx.designer.cs">
+      <DependentUpon>StudentCourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\StudentHomePage.aspx.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\StudentHomePage.aspx.designer.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\styles\signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\styles\signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Teacher.aspx.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Teacher.aspx.designer.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\TeacherSignup.aspx.cs">
+      <DependentUpon>TeacherSignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\TeacherSignup.aspx.designer.cs">
+      <DependentUpon>TeacherSignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\TeachersLogin.aspx.cs">
+      <DependentUpon>TeachersLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\TeachersLogin.aspx.designer.cs">
+      <DependentUpon>TeachersLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\watch-video.aspx.cs">
+      <DependentUpon>watch-video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\watch-video.aspx.designer.cs">
+      <DependentUpon>watch-video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Courses.aspx.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Courses.aspx.designer.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InstructerList.aspx.cs">
+      <DependentUpon>InstructerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InstructerList.aspx.designer.cs">
+      <DependentUpon>InstructerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\instructorDetails.aspx.cs">
+      <DependentUpon>instructorDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\instructorDetails.aspx.designer.cs">
+      <DependentUpon>instructorDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\students.aspx.cs">
+      <DependentUpon>students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\students.aspx.designer.cs">
+      <DependentUpon>students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm9.aspx.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm9.aspx.designer.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\bootstrap-icons.woff" />
+    <Content Include="assets\fonts\bootstrap-icons.woff2" />
+    <Content Include="assets\fonts\DMSans-Bold.eot" />
+    <Content Include="assets\fonts\DMSans-Bold.ttf" />
+    <Content Include="assets\fonts\DMSans-Bold.woff" />
+    <Content Include="assets\fonts\DMSans-Bold.woff2" />
+    <Content Include="assets\fonts\DMSans-Medium.eot" />
+    <Content Include="assets\fonts\DMSans-Medium.ttf" />
+    <Content Include="assets\fonts\DMSans-Medium.woff" />
+    <Content Include="assets\fonts\DMSans-Medium.woff2" />
+    <Content Include="assets\fonts\DMSans-Regular.eot" />
+    <Content Include="assets\fonts\DMSans-Regular.ttf" />
+    <Content Include="assets\fonts\DMSans-Regular.woff" />
+    <Content Include="assets\fonts\DMSans-Regular.woff2" />
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\Nioicon.eot" />
+    <Content Include="assets\fonts\Nioicon.ttf" />
+    <Content Include="assets\fonts\Nioicon.woff" />
+    <Content Include="assets\fonts\summernote.eot" />
+    <Content Include="assets\fonts\summernote.ttf" />
+    <Content Include="assets\fonts\summernote.woff" />
+    <Content Include="assets\fonts\summernote.woff2" />
+    <Content Include="assets\fonts\themify.eot" />
+    <Content Include="assets\fonts\themify.ttf" />
+    <Content Include="assets\fonts\themify.woff" />
+    <Content Include="assets\fonts\tinymce-mobile.woff" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.eot" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.ttf" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.woff" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.woff2" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.eot" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.ttf" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.woff" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.woff2" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.eot" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.ttf" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.woff" />
+    <Content Include="NewFolder1\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.woff2" />
+    <None Include="packages.config" />
+    <Content Include="Pages\Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55463</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55463/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

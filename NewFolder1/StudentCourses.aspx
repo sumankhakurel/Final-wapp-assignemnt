@@ -1,0 +1,238 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentCourses.aspx.cs" Inherits="Assignment.StudentCourses" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>courses</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+    <link href="assignment/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+   
+   <section class="flex">
+
+      <a href="StudentHomePage.aspx" class="logo">GlamEdy.</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="assignment/images/pic-1.jpg" class="image" />
+         <h3 class="name">shaikh anas</h3>
+         <p class="role">studen</p>
+         <a href="Profile.aspx" class="btn">view profile</a>
+         <div class="flex-btn">
+         <asp:Button ID="Button1" runat="server" Text="Log Out" class="option-btn" OnClick="btnLogOut_Click" />
+
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+       <img src="images/pic-1.jpg" class="image" alt="" />
+      
+      <h3 class="name">Sujan Pandit</h3>
+      <p class="role">Student</p>
+      <a href="Profile.aspx" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="StudentHomePage.aspx"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="StudentCourses.aspx"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="Teacher.aspx"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+      <a href="ContractUs.aspx"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="courses">
+
+   <h1 class="heading">our courses</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="assignment/images/pic-2.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-1.png" />
+            
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete HTML tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-3.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-2.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete CSS tutorial</h3>
+          <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-4.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-3.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JS tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-5.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-4.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete Boostrap tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-6.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-5.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JQuery tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-7.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-6.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete SASS tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-8.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-7.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete PHP tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+             <img src="assignment/images/pic-9.jpg" />
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-8.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete MySQL tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-1.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+             <img src="assignment/images/thumb-9.png" />
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete react tutorial</h3>
+         <a href="playlist.aspx" class="inline-btn">view playlist</a>
+      </div>
+
+   </div>
+
+</section>
+
+    </form>
+    <!-- custom js file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>
